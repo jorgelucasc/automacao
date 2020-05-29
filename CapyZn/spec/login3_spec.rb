@@ -1,6 +1,6 @@
 describe "Login Dinamico", :login3 do
   before(:each) do
-    visit "http://training-wheels-protocol.herokuapp.com/access"
+    visit "/access"
   end
   #simulando um caso onde o mesmo campo aparece 2 vezes com mesmo seletor css
 

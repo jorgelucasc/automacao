@@ -1,7 +1,7 @@
 describe "Validando Alertas", :alerts do
   #definido a pagina padrao para este spec
   before(:each) do
-    visit "http://training-wheels-protocol.herokuapp.com/javascript_alerts"
+    visit "/javascript_alerts"
   end
   #clicando no botão Alerta, e setando uma váriavel que irá obter o texto após clicar no botão
   #depois irá validar se o conteudo de msg é igual ao passado no eql
@@ -13,7 +13,7 @@ describe "Validando Alertas", :alerts do
   end
 
   it "confirmando" do
-    click_button "Confirm"
+    click_button "Confirma"
 
     msg = page.driver.browser.switch_to.alert.text
     expect(msg).to eql "E ai confirma?"
@@ -23,7 +23,7 @@ describe "Validando Alertas", :alerts do
   end
 
   it "não confirmada" do
-    click_button "Confirm"
+    click_button "Confirma"
 
     msg = page.driver.browser.switch_to.alert.text
     expect(msg).to eql "E ai confirma?"

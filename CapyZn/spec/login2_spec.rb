@@ -1,6 +1,6 @@
 describe "Login Dinamico", :login2 do
   before(:each) do
-    visit "http://training-wheels-protocol.herokuapp.com/login2"
+    visit "/login2"
   end
 
   it "data" do

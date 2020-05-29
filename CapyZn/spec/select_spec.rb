@@ -1,16 +1,13 @@
-describe 'Select Simples', :select do
+describe "Select Simples", :select do
+  before(:each) do
+    visit "/apps/select2/single.html"
+  end
 
-    before(:each) do
-      visit 'http://training-wheels-protocol.herokuapp.com/apps/select2/single.html'
-    end
+  it "Seleção Simples" do
+    tr = find(".select2-container")
+    tr.click
+    find(".select2-results__option", text: "Adam Sandler").click
 
-    it 'Seleção Simples' do
-      tr = find('.select2-container')
-      tr.click
-      find('.select2-results__option', text:'Adam Sandler').click
-
-      sleep 3
-    end
-    
-  
+    sleep 3
+  end
 end
